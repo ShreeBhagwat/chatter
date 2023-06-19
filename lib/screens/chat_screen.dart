@@ -39,7 +39,12 @@ class ChatScreen extends ConsumerWidget {
                       return Card(
                         child: Padding(
                           padding: const EdgeInsets.all(20.0),
-                          child: Text(message.message!),
+                          child: Column(
+                            children: [
+                              Text(message.message!),
+                              Text(message.senderUid!),
+                            ],
+                          ),
                         ),
                       );
                     },
